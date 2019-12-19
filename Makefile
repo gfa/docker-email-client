@@ -11,6 +11,7 @@ run:
 		--stop-signal=SIGRTMIN+3 --env DEBBASE_NO_STARTUP_APT=y \
 		--env DEBBASE_SSH=enabled \
 		-p 127.0.0.1:9022:22/tcp \
+		--restart unless-stopped \
 		--name neomutt_mua neomutt_mua
 	-docker start neomutt_mua
 
